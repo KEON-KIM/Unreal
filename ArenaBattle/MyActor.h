@@ -2,6 +2,7 @@
 
 #pragma once
 
+#include "ArenaBattle.h"
 #include "EngineMinimal.h"
 #include "GameFramework/Actor.h"
 #include "MyActor.generated.h"
@@ -10,8 +11,8 @@ UCLASS()
 class ARENABATTLE_API AMyActor : public AActor
 {
 	GENERATED_BODY()
-	
-public:	
+
+public:
 	// Sets default values for this actor's properties
 	AMyActor();
 
@@ -19,7 +20,7 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
+public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 	UPROPERTY(VisibleAnywhere)
@@ -34,8 +35,8 @@ public:
 	UPROPERTY(VisibleAnywhere)
 	UParticleSystemComponent *Splash;
 
-
-	UPROPERTY(EditAnywhere, Category = ID);
+	UPROPERTY(VisibleAnywhere)
 	int32 ID;
-	
+	//UPROPERTY(EditAnywhere, Category = ID);
+	//int ID;
 };
