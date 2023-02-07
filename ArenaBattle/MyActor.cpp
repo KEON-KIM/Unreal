@@ -53,11 +53,10 @@ AMyActor::AMyActor()
 void AMyActor::BeginPlay()
 {
 	Super::BeginPlay();
-	UE_LOG(ArenaBattle, Warning, TEXT("Actor Name : %s, ID : %d, Location X : %.3f"), *GetName(), ID, GetActorLocation().X);
+	UE_LOG(ArenaBattle, Warning, TEXT("Actor Name : %s, ID : , Location X : %.3f"), *GetName(), GetActorLocation().X);
 
-	ABLOG_S(Warning);
-	ABLOG(Warning, TEXT("Actor Name : %s, ID : %d, Location X : %.3f"), *GetName(), ID, GetActorLocation().X);
-}
+	//ABLOG_S(Warning);
+	//ABLOG(Warning, TEXT("Actor Name : %s, ID : , Location X : %.3f"), *GetName(), GetActorLocation().X);
 }
 
 // Called every frame
@@ -66,4 +65,3 @@ void AMyActor::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 }
-
